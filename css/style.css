@@ -1,0 +1,212 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	color: 	black;
+}
+header{
+	height: 70px;
+}
+header h1{
+	float: left;
+	display: inline-block;
+	padding: 16px 24px; 
+	text-transform: uppercase;
+}
+header h1 a {
+	transition: .3s;
+}
+header h1 a:hover{
+	color: red;
+}
+header ul{
+	float: right;
+}
+header ul li{
+	padding: 24px;
+	display: inline-block;
+}
+header ul li a{
+	transition: .3s;
+}
+header ul li a:hover{
+	color: red;
+}
+a {
+	text-decoration: none;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+.container::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.mobile-menu{
+	float: right;
+	display: none;
+	padding: 18px;
+	border: 1px solid;
+}
+.mobile-menu:hover{
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width: 300px;
+	background: rgb(16, 47, 80, .9);	
+	transition: .3s;
+}
+.sidebar ul li a{
+	color: white;
+}
+.sidebar ul li:hover{
+	background-color: red;
+}
+.sidebar ul li{
+	transition: .3s;
+	padding: 24px 24px;
+}
+
+.banner	 img{
+	width: 100px;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px #ddd;
+	height: 100px;
+	margin-bottom: 10px;
+}
+.banner{
+	padding: 150px 0;
+	background-color: #1f68B6;
+}
+.banner .container{
+	padding: 24px;
+}
+.banner	p{
+	font-size: 18px;
+}
+.banner	h2{
+	margin-bottom: 	10px;
+}
+.banner	h2, 
+.banner	p,
+.banner span{
+	color: 	white	;
+}
+section{
+	padding: 50px 0;
+}	
+section h3{
+	padding-bottom: 10px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 10px;
+}
+section h3::before{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 120px;
+	height: 1px;
+	left: calc(50% - 60px);
+	background-color: #ddd;
+}
+
+section h3::after{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 40px;
+	height: 4px;
+	left: calc(50% - 20px);
+	background-color: red;
+}
+
+section	p{
+	font-size: 	20px;
+}
+
+#portofolio,
+#kontak,
+#blog{
+	background-color: #f9f9f9;
+	margin-bottom: 	20px;
+}
+
+.col-4 img{
+	margin-top: 10px;
+	width: 280px;
+	height: 135px;
+	margin-bottom: 10px;
+	padding-right: 10px;
+}
+.col-4{
+	text-align: center;
+	float: left	;
+	width: 25%;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+.col-4	a:hover	img{
+	transform: scale(1.2);
+}
+
+#kontak .container{
+	text-align: center;
+}
+
+.col-3 {
+	float: left;
+	width: 33.33%;
+	box-sizing: border-box;
+	padding: 	10px;
+
+}
+.col-3	h4{
+	margin-bottom: 10px;
+}
+
+.col-3 i{
+	margin-bottom: 10px;
+}
+
+footer{
+	background-color: #333;
+	padding: 30px;
+	text-align: center;
+}
+footer small{
+	color: white;
+}
+
+#check:checked ~ .sidebar{
+	left: 0;
+}
+@media (max-width: 768px){
+	.mobile-menu{
+		display: block;
+	}
+	header ul{
+		display: none;
+	}
+	.col-4	{
+		width: 50%;
+	}
+	.col-3	{
+		width: 	100%;
+		text-align: center;
+
+	}
+}
